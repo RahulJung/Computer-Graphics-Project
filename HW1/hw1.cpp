@@ -31,6 +31,7 @@ void renderPixel(int x, int y) {
     assert(x >= 0 && y >= 0 && x <= radius && y <= radius);
     image[x][y] = 1;
     // TODO:  light up the pixel's symmetric counterpart
+    image[y][x] = 1;
 }
 
 void rasterizeArc(int r) {
