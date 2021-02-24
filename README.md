@@ -19,4 +19,5 @@ To run this app in your computer, clone the repository and cd into HW1 folder an
 ```
 $ g++ hw1.cpp
 $ ./a.out 200
+$  display circle200.ppm
 ```
