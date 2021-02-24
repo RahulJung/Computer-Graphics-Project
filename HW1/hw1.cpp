@@ -36,7 +36,23 @@ void renderPixel(int x, int y) {
 
 void rasterizeArc(int r) {
     // TODO:  rasterize the arc using renderPixel to light up pixels
-
+    int x = 0;
+    int y = radius;
+    double d = 5.0 / 4.0 - radius;
+    renderPixel(x, y);	
+    while (y > x)
+    {
+        // Select E
+        if (d < 0){
+            d += 2.0 * x + 3.0;
+        }
+        else{
+            d +=2.0 * (x-y) + 5.0;
+            y--;	
+        }
+        x++;		
+        renderPixel(x, y);	
+    }
 }
 
 // You shouldn't need to change anything below this point.
