@@ -1,7 +1,5 @@
 # CG
 
----
-
 ## Computer Graphics Assignments
 
 Name: Rahul Chauhan
