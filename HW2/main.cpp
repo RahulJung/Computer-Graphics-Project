@@ -122,6 +122,47 @@ void problem3() {
 void problem4() {
     // TODO: Your code here!
 
+	// Create Head
+	glPushMatrix(); 
+	glTranslatef(0, 1, 0); 
+	glScalef(1, 1.5, 1);
+	glutSolidSphere(0.25, 16, 16);
+	glPopMatrix();
+
+	//Create body
+	glPushMatrix(); 
+	glTranslatef(0, 0.2, 0); 
+	glScalef(1, 1.5, 1);
+	glutSolidSphere(0.5, 6, 6);
+	glPopMatrix();
+
+	//Create right hand
+	glPushMatrix(); 
+	glTranslatef(0.5, 1, 0); 
+	glScalef(0.1, 1, 0.1);
+	glutSolidCube(1);
+	glPopMatrix();
+
+	//Create left hand
+	glPushMatrix(); 
+	glTranslatef(-0.5, 1, 0); 
+	glScalef(0.1, 1, 0.1);
+	glutSolidCube(1);
+	glPopMatrix();
+
+	//Create left leg
+	glPushMatrix(); 
+	glTranslatef(-0.2, -0.5, 0); 
+	glScalef(0.1, 2, 0.1);
+	glutSolidCube(1);
+	glPopMatrix();
+
+	//Create right leg
+	glPushMatrix(); 
+	glTranslatef(0.2, -0.5, 0); 
+	glScalef(0.1, 2, 0.1);
+	glutSolidCube(1);
+	glPopMatrix();
 }
 
 void display() {
