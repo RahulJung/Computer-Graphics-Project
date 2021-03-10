@@ -41,7 +41,7 @@ int lastPos[2];
 float cameraPos[4] = {0,1,4,1};
 int windowWidth = 640, windowHeight = 480;
 double yRot = 0;
-int curProblem = 2; // TODO: change this number to try different examples
+int curProblem = 10; // TODO: change this number to try different examples
 
 float specular[] = { 1.0, 1.0, 1.0, 1.0 };
 float shininess[] = { 50.0 };
