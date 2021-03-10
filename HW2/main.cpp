@@ -41,25 +41,87 @@ int lastPos[2];
 float cameraPos[4] = {0,1,4,1};
 int windowWidth = 640, windowHeight = 480;
 double yRot = 0;
-int curProblem = 10; // TODO: change this number to try different examples
+int curProblem = 3; // TODO: change this number to try different examples
 
 float specular[] = { 1.0, 1.0, 1.0, 1.0 };
 float shininess[] = { 50.0 };
 
 void problem1() {
     // TODO: Your code here!
+	int rotation = 0;
+	double x = 1;
+	double y = 0;
+
+	for(int i = 0; i < 10; i++){
+
+		glPushMatrix(); 
+		// setting up teapot in the scene 
+		glTranslatef(x, y, 0);  
+		// rotation based on the degree
+		glRotatef(rotation, 0, 0, 1);
+		glutSolidTeapot(0.2); 
+		glPopMatrix();
+
+		rotation = rotation + 36;
+ 		// y-axis position
+		y = sin((rotation * 3.14159265)/180);
+		// x-axis position
+		x = cos((rotation * 3.14159265)/180);	
+	}
+
 }
 
 void problem2() {
     // TODO: Your code here!
+	double offset = 0.05;
+	double x = -2;
+	double y = 0.05;
+	double z = 0;
+	double scale = 0.2;
+
+	for (int i=0; i<15; i++){ 
+
+		scale = scale + 0.06;
+		x = x + 0.28;
+		y = scale/2; 
+		z = z - 0.035;
+
+		glPushMatrix();
+		glTranslatef(x, y, z); 
+		glutSolidCube(scale);  
+		glPopMatrix();
+	
+	}
 }
 
 void problem3() {
     // TODO: Your code here!
+	double scale = 0.15;
+	double x = 0;
+	double y = 1;
+
+	for (int i = 1; i <= 6; i++)
+	{
+		for (int j = 0; j < i; j++)
+		{
+			glPushMatrix(); 
+			glTranslatef(x, y, 0.5); 
+			glutSolidTeapot(scale);	
+			glPopMatrix();	
+			// next teapot on this row
+			x = x + 0.8; 
+
+		}
+		
+		x = i * -0.4; 
+		y = y - 0.3; 
+		
+	}
 }
 
 void problem4() {
     // TODO: Your code here!
+
 }
 
 void display() {
