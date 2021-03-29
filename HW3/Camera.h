@@ -1,5 +1,4 @@
 
-
 #pragma once
 
 // Std. Includes
@@ -68,7 +67,8 @@ public:
     // TODO: Returns the view matrix calculated using Eular Angles and the LookAt Matrix
     glm::mat4 GetViewMatrix()
     {
-
+        //camera view angle navigation
+		return glm::lookAt(Position, Position + Front, Up);
     }
 
     // Processes input received from any keyboard-like input system. Accepts input parameter in the form of camera defined ENUM (to abstract it from windowing systems)
@@ -133,5 +133,3 @@ private:
         this->Up    = glm::normalize(glm::cross(this->Right, this->Front));
     }
 };
-
-
