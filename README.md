@@ -32,3 +32,12 @@ To run this app in your computer, clone the repository and cd into HW2 folder an
 $ make
 $ ./hw2
 ```
+
+### HW3
+
+To run this app in your computer, clone the repository and cd into HW2 folder and enter the following commands in your terminal:
+
+```
+$ make
+$ ./hw3
+```
